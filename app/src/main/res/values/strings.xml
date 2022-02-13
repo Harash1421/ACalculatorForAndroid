@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ACalculator</string>
+    <string name="Zero">0</string>
+    <string name="PlusZero">00</string>
+    <string name="One">1</string>
+    <string name="Two">2</string>
+    <string name="Three">3</string>
+    <string name="Four">4</string>
+    <string name="Five">5</string>
+    <string name="Six">6</string>
+    <string name="Seven">7</string>
+    <string name="Eight">8</string>
+    <string name="Nine">9</string>
+    <string name="Minus">-</string>
+    <string name="Plus">+</string>
+    <string name="Divided">÷</string>
+    <string name="Minus_And_Plus">+/-</string>
+    <string name="Multiplied">x</string>
+    <string name="Equal">=</string>
+    <string name="Bracket_Left">(</string>
+    <string name="Bracket_Right">)</string>
+    <string name="Clear">C</string>
+    <string name="History">History</string>
+    <string name="Del">.</string>
+
+</resources>

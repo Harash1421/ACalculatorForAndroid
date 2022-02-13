@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/Dark_Black"
+    android:orientation="vertical"
+    tools:context="com.mms.acalculator.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_toolbar"
+        android:backgroundTintMode="multiply"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:titleTextColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/tvShow"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:autoSizeMaxTextSize="100sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/Dark_Black"
+        android:fontFamily="@font/robott_regular"
+        android:gravity="center|right"
+        android:paddingLeft="4pt"
+        android:paddingRight="4pt"
+        android:text="@string/Zero"
+        android:textColor="#F6F6F6"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        tools:ignore="RtlHardcoded,RtlSymmetry,DuplicateSpeakableTextCheck"
+        tools:targetApi="o" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buClear"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="0dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Clear"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,NestedWeights,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu_Bracket_Left"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="0dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Bracket_Left"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu_Bracket_Right"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="0dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Bracket_Right"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/buDivided"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="0dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Divided"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bu7"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="4dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Seven"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp" />
+
+        <Button
+            android:id="@+id/bu8"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="4dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Eight"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu9"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="4dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Nine"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/buMultiplied"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="4dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Multiplied"
+
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bu4"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Four"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu5"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Five"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute"
+            tools:targetApi="lollipop" />
+
+        <Button
+            android:id="@+id/bu6"
+            android:layout_width="35pt"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Six"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/buMinus"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Minus"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bu1"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/One"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu2"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Two"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu3"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Three"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/buPlus"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="2dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Plus"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/bu_Plus0"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="4dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/PlusZero"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu0"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="4dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Zero"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,NestedWeights,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/bu_Dot"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Dark"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="4dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Del"
+            android:textColor="#FFFFFF"
+
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,OnClick,RtlHardcoded,UnusedAttribute" />
+
+        <Button
+            android:id="@+id/buEqual"
+            android:layout_width="35pt"
+            android:layout_height="45pt"
+            android:layout_marginEnd="2pt"
+            android:layout_marginRight="2pt"
+            android:layout_weight="1"
+            android:backgroundTint="@color/Green"
+            android:fontFamily="@font/robott_regular"
+            android:insetTop="2dp"
+            android:insetBottom="4dp"
+            android:soundEffectsEnabled="false"
+            android:text="@string/Equal"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            tools:ignore="ButtonStyle,RtlHardcoded,UnusedAttribute" />
+
+    </LinearLayout>
+
+</LinearLayout>
